@@ -51,6 +51,13 @@ const LocalTable = ({
                 passes = true;
               }
               break;
+            case 'object':
+              if (rowData[key].wafoTableSearch && typeof rowData[key].wafoTableSearch === 'string') {
+                if (rowData[key].wafoTableSearch.toLowerCase().indexOf(debouncedSearch.toLowerCase()) !== -1) {
+                  passes = true;
+                }
+              }
+              break;
             default:
               break;
           }
