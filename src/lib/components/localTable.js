@@ -52,7 +52,7 @@ const LocalTable = ({
               }
               break;
             case 'object':
-              if (rowData[key].wafoTableSearch && typeof rowData[key].wafoTableSearch === 'string') {
+              if (rowData[key] && rowData[key].wafoTableSearch && typeof rowData[key].wafoTableSearch === 'string') {
                 if (rowData[key].wafoTableSearch.toLowerCase().indexOf(debouncedSearch.toLowerCase()) !== -1) {
                   passes = true;
                 }
